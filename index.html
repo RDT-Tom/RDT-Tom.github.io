@@ -1,9 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page</h1>
-</body>
-</html>
+ <doctype html>
+    <html>
+    <head>
+        <title>Rim drive logger</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{ font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+            header{ background-color: #3b538e; padding: 20px; text-align: center; color: white; }
+            h1{ margin: 0; font-size: 24px; }
+            .container{ max-width: 800px; margin: 40px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
+            ul{ list-style: none; padding: 0; }
+            li{ padding: 10px 0; }
+            a{ color: #3b538e; text-decoration: none; font-weight: 500; }
+            button{ background-color: #3b538e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: px 5px; } /* Increased margin */
+            button:hover{ background-color: #4a649f; }
+            footer{ text-align: center; padding: 10px; background-color: #3b538e; color: white; position: fixed; width: 100%; bottom: 0; }
+        </style>
+    </head>
+    <body>
+        <header><h1>Rim Drive Data Logger</h1></header>
+    <div style="text-align: center;">
+        <p>You are not connected to the logger correctly <br>
+        go to your wifi settings <br>
+        and connect to the Rim drive logger network.</p>
+
+        
+
+        <p style="padding-top: 40px;">If you want the manual click on the button below:</p>
+        <button onclick="downloadManual()">Download Manual</button>
+        
+
+        <p style="padding-top: 40px;"> for other questions please go to:</p>
+        <button onclick="linkto()">contact</button>
+        <script>
+            function downloadManual() {
+                const link = document.createElement('a');
+                link.href = 'User-manual-POD.pdf'; // Replace with the actual path to the manual
+                link.download = 'manual.pdf';
+                link.click();
+            }
+
+            function linkto() {
+                window.location.href = 'https://rimdrivetechnology.nl/contact/'; // Replace with the actual path to the contact page
+            }
+        </script>
+    </div> 
+        <footer>&copy; 2024 Rim Drive Data Logger</footer>
+       
